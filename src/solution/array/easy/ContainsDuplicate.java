@@ -11,6 +11,7 @@ public class ContainsDuplicate {
 
     public static void main(String[] args) {
         ContainsDuplicate object = new ContainsDuplicate();
+        object.containsDuplicate(new int[]{1, 2, 3, 1});
     }
 
     /*
@@ -28,8 +29,8 @@ public class ContainsDuplicate {
      */
     public boolean containsDuplicate(int[] nums) {
         Arrays.sort(nums);
-        for(int ind = 1; ind < nums.length; ind++) {
-            if(nums[ind] == nums[ind - 1]) {
+        for (int ind = 1; ind < nums.length; ind++) {
+            if (nums[ind] == nums[ind - 1]) {
                 return true;
             }
         }
